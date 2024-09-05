@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://www.istockphoto.com/photo/farmer-ploughing-field-gm1029301814-275852902');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #f8f9fa;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        label {
+            color: #f8f9fa;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center">Loan Prediction System</h1>
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="no_of_dependents">Number of Dependents</label>
+                    <input type="number" class="form-control" name="no_of_dependents" required>
+                </div>
+                <div class="form-group">
+                    <label for="income_annum">Annual Income</label>
+                    <input type="number" class="form-control" name="income_annum" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan_amount">Loan Amount</label>
+                    <input type="number" class="form-control" name="loan_amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan_term">Loan Term (in years)</label>
+                    <input type="number" class="form-control" name="loan_term" required>
+                </div>
+                <div class="form-group">
+                    <label for="cibil_score">CIBIL Score</label>
+                    <input type="number" class="form-control" name="cibil_score" required>
+                </div>
+                <div class="form-group">
+                    <label for="residential_assets_value">Residential Assets Value</label>
+                    <input type="number" class="form-control" name="residential_assets_value" required>
+                </div>
+                <div class="form-group">
+                    <label for="commercial_assets_value">Commercial Assets Value</label>
+                    <input type="number" class="form-control" name="commercial_assets_value" required>
+                </div>
+                <div class="form-group">
+                    <label for="luxury_assets_value">Luxury Assets Value</label>
+                    <input type="number" class="form-control" name="luxury_assets_value" required>
+                </div>
+                <div class="form-group">
+                    <label for="bank_asset_value">Bank Asset Value</label>
+                    <input type="number" class="form-control" name="bank_asset_value" required>
+                </div>
+                <div class="form-group">
+                    <label for="education_Not Graduate">Education Level</label>
+                    <select class="form-control" name="education_Not Graduate" required>
+                        <option value="0">Graduate</option>
+                        <option value="1">Not Graduate</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="self_employed_Yes">Self Employed</label>
+                    <select class="form-control" name="self_employed_Yes" required>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
